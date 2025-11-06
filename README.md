@@ -1,7 +1,4 @@
 # 🌐 Página Personal Accesible | Aprendizaje Autónomo (AA)
-
-**Puntos:** 5 │ **Entrega:** 30-10-2025  
-Proyecto de aprendizaje autónomo correspondiente al bloque de **Diseño Web Accesible y Buenas Prácticas UX/UI**.  
 Este proyecto consiste en el desarrollo de una **página personal** construida con **HTML y CSS**, aplicando **Flexbox/Grid**, principios de **accesibilidad web (WAI-ARIA)** y fundamentos de **experiencia de usuario (UX)**.
 
 ---
