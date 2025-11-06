@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Página personal accesible - Pablo y Emilio</title>
+  <meta name="description" content="Página personal con accesibilidad y UX/UI de dos personas">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --accent:#06b6d4;
+      --accent-cta:#0ea5a4;
+      --text:#e6eef8;
+      --max-width:1200px;
+      --radius:12px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      font-size:16px;
+    }
+
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#071021);color:var(--text)}
+    a{color:var(--accent);text-decoration:none}
+    a:focus{outline:3px solid rgba(6,182,212,0.3);outline-offset:3px}
+
+    .container{max-width:var(--max-width);margin:2rem auto;padding:1rem}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem;border-radius:var(--radius);background:var(--card);box-shadow:0 4px 20px rgba(0,0,0,0.4)}
+    nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
+    nav a{padding:.4rem .6rem;border-radius:8px}
+    nav a:hover, nav a:focus{background:rgba(255,255,255,0.05)}
+
+    main{display:grid;grid-template-columns:1fr 350px;gap:1.25rem}
+    @media(max-width:900px){main{grid-template-columns:1fr}}
+
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:1rem;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,0.6);margin-bottom:1rem}
+    .hero{display:flex;gap:1rem;align-items:center}
+    .avatar{width:120px;height:120px;border-radius:12px;overflow:hidden;flex-shrink:0}
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    .muted{color:var(--muted)}
+
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+    .project{padding:.75rem;border-radius:10px;background:rgba(0,0,0,0.15)}
+    .project h3{margin:.25rem 0}
+
+    form{display:grid;gap:.5rem}
+    input,textarea{padding:.6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text)}
+    input:focus,textarea:focus{box-shadow:0 0 0 4px rgba(14,165,164,0.15);outline:none}
+    button{padding:.6rem .9rem;border-radius:8px;border:0;background:var(--accent-cta);color:#012;font-weight:600;cursor:pointer}
+    button:hover{transform:translateY(-2px)}
+    footer{text-align:center;padding:1rem 0;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header role="banner">
+      <div>
+        <h1 style="margin:0;">Página Personal - Pablo & Emilio</h1>
+        <p class="muted">Ejemplo con accesibilidad, UX/UI y diseño responsivo</p>
+      </div>
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="#pablo">Pablo</a></li>
+          <li><a href="#Emilio">Emilio</a></li>
+          <li><a href="#docs">Documentación</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Columna Izquierda -->
+      <div>
+        <!-- Persona 1 -->
+        <section id="pablo" class="card">
+          <div class="hero">
+            <div class="avatar">
+              <img src="foto-andres.jpg" alt="Foto de Pablo Andrés Correa Rojas">
+            </div>
+            <div>
+              <h2>Pablo Andrés Correa Rojas</h2>
+              <p class="muted">Desarrollador web enfocado en accesibilidad, interfaces responsivas y buenas prácticas UX/UI.</p>
+            </div>
+          </div>
+
+          <h3>Biografía</h3>
+          <p>Estudiante de Ingeniería en Sistemas Computacionales. Apasionado por la accesibilidad digital y el diseño limpio. He trabajado en proyectos web adaptativos y herramientas para usuarios con diversidad funcional.</p>
+
+          <h3>Portafolio</h3>
+          <div class="projects">
+            <div class="project">
+              <h3>Sitio accesible para biblioteca</h3>
+              <p>Diseño accesible con roles ARIA y navegación por teclado.</p>
+            </div>
+            <div class="project">
+              <h3>Dashboard responsivo</h3>
+              <p>Diseñado con CSS Grid, adaptable a distintos dispositivos.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Persona 2 -->
+        <section id="Emilio" class="card">
+          <div class="hero">
+            <div class="avatar">
+              <img src="foto-emilio.png" alt="Foto de Emilio Quinde">
+            </div>
+            <div>
+              <h2>Emilio Jose Quinde Villa</h2>
+              <p class="muted">Diseñador UX/UI con experiencia en interfaces accesibles y proyectos colaborativos.</p>
+            </div>
+          </div>
+
+          <h3>Biografía</h3>
+          <p>Estudiante en temas de programacion web. Trabaja en experiencias intuitivas y con contraste visual alto. Colabora con desarrolladores para optimizar la accesibilidad y estética visual.</p>
+
+          <h3>Portafolio</h3>
+          <div class="projects">
+            <div class="project">
+              <h3>App educativa</h3>
+              <p>Diseñada con enfoque multisensorial y feedback visual.</p>
+            </div>
+            <div class="project">
+              <h3>Portal corporativo accesible</h3>
+              <p>Optimización de contraste, lectura por voz y etiquetas claras.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Columna Derecha -->
+      <aside>
+        <!-- Contacto Pablo -->
+        <section class="card">
+          <h2>Contacto - Pablo</h2>
+          <address>
+            <p>Email: <a href="mailto:pablo.correa@est.ucacue.edu.ec">pablo.correa@est.ucacue.edu.ec</a></p>
+            <p>LinkedIn: <a href="#">linkedin.com/in/andres-rojas</a></p>
+            <p>GitHub: <a href="#">github.com/bandit0011</a></p>
+          </address>
+          <form onsubmit="return handleSubmit(event, 'Pablo')">
+            <label for="name1">Nombre</label>
+            <input id="name1" type="text" required>
+            <label for="msg1">Mensaje</label>
+            <textarea id="msg1" rows="3" required></textarea>
+            <button type="submit">Enviar</button>
+            <div id="fb1" role="status" class="muted"></div>
+          </form>
+        </section>
+
+        <!-- Contacto Emilio -->
+        <section class="card">
+          <h2>Contacto - Emilio</h2>
+          <address>
+            <p>Email: <a href="emilio.quinde@est.ucacue.edu.ec">emilio.quinde@est.ucacue.edu.ec</a></p>
+            <p>LinkedIn: <a href="#">linkedin.com/in/Emilio-martinez</a></p>
+            <p>Behance: <a href="#">behance.net/Emiliom</a></p>
+          </address>
+          <form onsubmit="return handleSubmit(event, 'Emilio')">
+            <label for="name2">Nombre</label>
+            <input id="name2" type="text" required>
+            <label for="msg2">Mensaje</label>
+            <textarea id="msg2" rows="3" required></textarea>
+            <button type="submit">Enviar</button>
+            <div id="fb2" role="status" class="muted"></div>
+          </form>
+        </section>
+      </aside>
+    </main>
+
+    <section id="docs" class="card" style="margin-top:1rem;">
+      <h2>Documentación y Pruebas</h2>
+      <p class="muted">Se incluyen secciones de presentación, portafolio y contacto de dos personas. El diseño usa Grid y Flexbox. Se aplicaron prácticas de accesibilidad (alt, roles, focus visible). Se probó en Chrome y Firefox con resolución adaptable.</p>
+    </section>
+
+    <footer>
+      <p>© 2025 Pablo & Emilio — Página demostrativa accesible y responsiva.</p>
+    </footer>
+  </div>
+
+  <script>
+    function handleSubmit(e, persona){
+      e.preventDefault();
+      const name = e.target.querySelector('input').value.trim();
+      const fb = e.target.querySelector('div[id^="fb"]');
+      if(!name){fb.textContent='Por favor ingresa tu nombre.';return false;}
+      fb.textContent = 'Gracias, ' + name + '. Tu mensaje fue enviado a ' + persona + ' (simulado).';
+      e.target.reset();
+      return false;
+    }
+  </script>
+</body>
+</html>
